@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'accounts.Member'
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 
     'AwsProject.core',
+    'AwsProject.accounts',
     'rest_framework',
 ]
 

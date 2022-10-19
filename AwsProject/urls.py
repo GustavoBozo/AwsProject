@@ -21,10 +21,13 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+
+from AwsProject.accounts.API.viewset import MemberViewset
 from AwsProject.core.API.viewset import TarefaViwSet
 
 router = routers.SimpleRouter()
 router.register(r'tarefas', TarefaViwSet, basename='tarefa')
+router.register(r'members', MemberViewset, basename='members')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
